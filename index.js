@@ -16,6 +16,9 @@ const transporter = nodeMailer.createTransport({
 app.get('/', (req, res) => {
     res.send('hi from database');
 })
+app.get('/list', (req, res) => {
+    res.send('listing')
+})
 app.post('/sendMail', (req, res) => {
     console.log(req.body);
     const mailOption = {
